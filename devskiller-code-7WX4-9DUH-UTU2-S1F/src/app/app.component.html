@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Notepad App</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="list-group">
+        <div class="list-group-item note" *ngFor="let note of notes" (click)="selectNote(note)">
+          <ng-container *ngIf="note.id == selected.id; else templateTitle">
+            <b [ngClass]="{ 'favorite-note': note.favourite }" [style.color]="note.color">{{ note.title }}</b>
+          </ng-container>
+          <ng-template #templateTitle>
+            <span [ngClass]="{ 'favorite-note': note.favourite }" [style.color]="note.color">{{ note.title }}</span>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div>
+        <form #noteForm="ngForm" (ngSubmit)="saveNote(selected)">
+          <div class="form-group">
+            <label for="">Title:</label>
+            <input class="note-title form-control" name="title" [(ngModel)]="selected.title" required>
+            <div class="form-error" *ngIf="noteForm.submitted && noteForm.controls.title?.errors?.required">Field is required</div>
+          </div>
+          <div class="form-group">
+            <label for="">Note:</label>
+            <textarea class="note-body form-control" name="body" [(ngModel)]="selected.body" required></textarea>
+            <div class="form-error" *ngIf="noteForm.submitted && noteForm.controls.body?.errors?.required">Field is required</div>
+          </div>
+          <div class="form-group">
+            <label for="">Favourite:</label>
+            <input type="checkbox" class="note-favourite" name="favourite" [(ngModel)]="selected.favourite">
+          </div>
+          <div class="form-group">
+            <label for="">Color:</label>
+            <input type="color" class="note-color" name="color" [(ngModel)]="selected.color">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success note-save" (click)="saveNote(selected)">Save</button>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        Please select note or <a href="#" class="note-new" (click)="newNote()">click here to create new one</a>
+      </div>
+
+    </div>
+  </div>
+</div>

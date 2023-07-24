@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 114.0.5735.199 (Windows 10)" package="" timestamp="2023-07-18T21:51:29" id="0" hostname="LIS151240_7" tests="13" errors="0" failures="10" time="0.218">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/114.0.5735.199 Safari/537.36"/>
+  </properties>
+  <testcase name="AppComponent should not change note on list until its saved" time="0.126" classname="AppComponent">
+    <failure type="">TypeError: Cannot read properties of undefined (reading 'triggerEventHandler')
+    at PageObject.selectListNote (src/app/page-object.ts:19:10)
+    at UserContext.apply (src/app/app.component.spec.ts:104:10)
+    at TestBedImpl.execute (node_modules/@angular/core/fesm2020/testing.mjs:24197:19)
+    at UserContext.apply (node_modules/@angular/core/fesm2020/testing.mjs:24414:24)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1968:30)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:26)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:39)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:371:52)
+    at Zone.run (node_modules/zone.js/fesm2015/zone.js:134:43)
+    at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:567:34)
+</failure>
+  </testcase>
+  <testcase name="AppComponent should keep note selected after its saved" time="0.009" classname="AppComponent">
+    <failure type="">TypeError: Cannot read properties of undefined (reading 'triggerEventHandler')
+    at PageObject.selectListNote (src/app/page-object.ts:19:10)
+    at UserContext.apply (src/app/app.component.spec.ts:119:10)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1968:30)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:26)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:39)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:371:52)
+    at Zone.run (node_modules/zone.js/fesm2015/zone.js:134:43)
+    at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:567:34)
+    at UserContext.&lt;anonymous&gt; (node_modules/zone.js/fesm2015/zone-testing.js:582:20)
+    at &lt;Jasmine&gt;
+</failure>
+  </testcase>
+  <testcase name="AppComponent should save note when Save button is clicked" time="0.015" classname="AppComponent">
+    <failure type="">Expected spy saveNote to have been called.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/app.component.spec.ts:70:32)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1968:30)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:26)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:39)
+</failure>
+  </testcase>
+  <testcase name="AppComponent should disable save button when required fields are empty" time="0.009" classname="AppComponent">
+    <failure type="">Expected false to be truthy 'Save button should be disabled on form errors'.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/app.component.spec.ts:84:54)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1968:30)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:26)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:39)
+</failure>
+  </testcase>
+  <testcase name="AppComponent should make note list item font 16px when note is favourite" time="0.005" classname="AppComponent">
+    <failure type="">TypeError: Cannot read properties of undefined (reading 'triggerEventHandler')
+    at PageObject.selectListNote (src/app/page-object.ts:19:10)
+    at UserContext.apply (src/app/app.component.spec.ts:136:21)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1968:30)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:26)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:39)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:371:52)
+    at Zone.run (node_modules/zone.js/fesm2015/zone.js:134:43)
+    at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:567:34)
+    at UserContext.&lt;anonymous&gt; (node_modules/zone.js/fesm2015/zone-testing.js:582:20)
+    at &lt;Jasmine&gt;
+</failure>
+  </testcase>
+  <testcase name="AppComponent should save note using NoteService when form is submitted" time="0.008" classname="AppComponent">
+    <failure type="">Expected spy saveNote to have been called with:
+  [ Object({ id: 355, title: 'Testing note 2', body: 'Testing Note Body 2', color: '#00ff00', favourite: true }) ]
+but it was never called.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/app.component.spec.ts:76:34)
+    at TestBedImpl.execute (node_modules/@angular/core/fesm2020/testing.mjs:24197:19)
+    at UserContext.apply (node_modules/@angular/core/fesm2020/testing.mjs:24414:24)
+    at UserContext.fakeAsyncFn (node_modules/zone.js/fesm2015/zone-testing.js:1968:30)
+</failure>
+  </testcase>
+  <testcase name="AppComponent should remove field`s error message when field has no errors" time="0.014" classname="AppComponent">
+    <failure type="">Expected &lt;body&gt;...&lt;/body&gt; to be falsy 'There should be no error when field is valid'.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/app.component.spec.ts:93:49)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1968:30)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:26)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:39)
+</failure>
+  </testcase>
+  <testcase name="AppComponent should set font color on the list item note`s color" time="0.005" classname="AppComponent">
+    <failure type="">TypeError: Cannot read properties of undefined (reading 'triggerEventHandler')
+    at PageObject.selectListNote (src/app/page-object.ts:19:10)
+    at UserContext.apply (src/app/app.component.spec.ts:147:21)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1968:30)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:26)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:39)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:371:52)
+    at Zone.run (node_modules/zone.js/fesm2015/zone.js:134:43)
+    at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:567:34)
+    at UserContext.&lt;anonymous&gt; (node_modules/zone.js/fesm2015/zone-testing.js:582:20)
+    at &lt;Jasmine&gt;
+</failure>
+  </testcase>
+  <testcase name="AppComponent should select note when clicked (add `active` class)" time="0.009" classname="AppComponent">
+    <failure type="">Expected list-group-item note to contain 'active', 'Selected note element should have class `active`'.
+    at &lt;Jasmine&gt;
+    at UserContext.apply (src/app/app.component.spec.ts:52:42)
+    at TestBedImpl.execute (node_modules/@angular/core/fesm2020/testing.mjs:24197:19)
+    at UserContext.apply (node_modules/@angular/core/fesm2020/testing.mjs:24414:24)
+    at UserContext.fakeAsyncFn (node_modules/zone.js/fesm2015/zone-testing.js:1968:30)
+</failure>
+  </testcase>
+  <testcase name="AppComponent should populate inputs with selected note`s title and text" time="0.006" classname="AppComponent">
+    <failure type="">TypeError: Cannot read properties of undefined (reading 'triggerEventHandler')
+    at PageObject.selectListNote (src/app/page-object.ts:19:10)
+    at UserContext.apply (src/app/app.component.spec.ts:57:10)
+    at UserContext.apply (node_modules/zone.js/fesm2015/zone-testing.js:1968:30)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:26)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:39)
+    at ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:371:52)
+    at Zone.run (node_modules/zone.js/fesm2015/zone.js:134:43)
+    at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:567:34)
+    at UserContext.&lt;anonymous&gt; (node_modules/zone.js/fesm2015/zone-testing.js:582:20)
+    at &lt;Jasmine&gt;
+</failure>
+  </testcase>
+  <testcase name="AppComponent should list all notes" time="0.005" classname="AppComponent"/>
+  <testcase name="AppComponent should show empty form when new note is created" time="0.006" classname="AppComponent"/>
+  <testcase name="[STRUCTURE TEST] should include required files, classes and methods with the expected names" time="0.001" classname="[STRUCTURE TEST]"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
